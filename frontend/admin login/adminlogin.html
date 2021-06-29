@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<!--Language--> 
+
+<head>
+<!--Description of meta (information about data used by browsers)-->     
+    <meta charset="utf-8">
+	<meta name="keywords" content="MauriShop Shopping Website"> 
+	<meta name="description" content="Shop with MauriShop, a trustworthy seller providing quality on time products">
+    <meta name="author" content="Hadiyah Mohit">
+	
+<!--User's visible area of a web page. It varies with the device-->    
+<!--The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<!--Display the page you are in in when mouse hovers in url-->         
+<title> Admin | Log in | MauriShop</title>    
+
+<!--Linking Style Sheet-->  
+
+    <link rel ="stylesheet" type ="text/css" href ="css/style.css"> 
+	
+	 
+ <!--The file containing codes in jQuery--> 
+     <script src = "js/jQuery.js"></script> 
+
+
+ 	
+
+<!--Icon displayed on top-->  
+    <link href="images/top-icon.png" rel="shortcut icon">   
+	
+<!--Using Font awesome icons to put icons for envelop,phone number,gmail,linkedin,facebook,instagram--> 
+<!--When crossorigin = "anonymous" it tells a browser to execute the https://kit.fontawesome.com/c8e4d183c2.js script without sending user-credential-->   
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script> 
+
+	  
+</head>
+
+<body>
+
+   <nav> 
+   
+ <!--social-links-and-phone-number-->
+    <div class="social-call">
+	
+	  <!--Displaying phone-number with phone icon--> 
+	  <!--Displaying contact with envelop icon--> 
+	  <!--When hovered they change colour and appear as darkcyan--> 
+      <!--Go to the required link when clicking on the respective icons--> 
+        <div class="contact">
+		    <a href =" "  title ="phone number"><i class="fa fa-phone-square" aria-hidden="true"></i>+230 5905 8212</a>    
+		    <a href="" title ="contact email"><i class="fa fa-envelope"></i>info@domain.com</a>	
+			<a href="about-us.html" title = "about us"><i class="fa fa-address-card-o" aria-hidden="true"></i>About us</a> 
+		</div>
+
+      <!--social-links-->
+	  <!--Go to the required link when clicking on the respective icons--> 
+	  <!--When hovered,they become big and change colour-->
+        <div class="social">
+            <a href="https://www.facebook.com/" title ="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter" title ="twitter"></i></a>
+		    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin" title ="linkedin"></i></a>  
+			<a href="https://accounts.google.com/Login/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fab fa-google-plus" title ="google plus"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube" title ="youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram" title ="instagram"></i></a>
+        </div>
+        </div>
+       
+    </div>   
+	
+   <!--jQuery-->     
+  
+   
+   <!--Script--> 
+     <script type = "text/javascript">     
+	
+	
+	/*---For Login and Sign-up----------------------------*/  
+	/*When clicked on Account icon which is of class user, log in form will appear 
+      if clicked on already have account which is of class already-account, sign up form will disappear and log in from will appear*/ 
+    $(document).on('click','.user,.already-account',function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+    
+	/*if clicked on already create account which is of class sign-up-btn, log in form will disappear and sign up from will appear*/
+    $(document).on('click','.sign-up-btn',function(){
+        $('.form').addClass('sign-up-active').removeClass('login-active')
+    });
+ 
+    /*if clicked on cross (cancel button) which is of class form-cancel, both log in form and sign up form will disappear*/
+    $(document).on('click','.form-cancel',function(){
+        $('.form').removeClass('login-active').removeClass('sign-up-active')
+    });   
+	
+	</script>   
+
+	
+ <!---login-and-sign-up--------------------------------->
+    <div class="admin-form">
+       
+	   <!--login---------->
+        <div class="admin-login-form">  
+		  <!--cancel-btn---------------->
+		  <!--Cancelling the form, erasing everything-->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a> 
+			
+            <strong>Log In as Admin</strong>
+			
+          <!--inputs-->
+            <form>
+                <input type="email" name="email" id = "email" placeholder="Example@gmail.com" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" title = "The 
+				required pattern should be in the form of [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
+				
+                <input type="password" name="password" id = "password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"required> 
+                <input type="submit" value="Log In"/>
+				 <span>
+					 <input type="checkbox" class="checkbox"> 
+						Keep me signed in
+				 </span>  
+            </form> 
+			
+	      <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>  
+		
+       <!--Sign-up---------->
+        <div class="admin-sign-up-form">
+          <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+			
+            <strong>Sign Up as Admin</strong>  
+			
+          <!--inputs-->
+             <form>
+			    <input type="text" name="firstname" placeholder="First Name" pattern = "([A-Z]+ [A-Z]+|[A-Z]+|[A-Z]+ )" title ="First Name should be in CAPITAL and contains only alphabets" required>
+				
+                <input type="text" name="lastname" placeholder="Last Name" pattern = "([A-Z]+ [A-Z]+|[A-Z]+|[A-Z]+ )" title ="Last Name should be in CAPITAL and contains only alphabets"  required>
+				
+                <input type="email" name="email" placeholder="Example@gmail.com" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" title = "The 
+				required pattern should be [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
+				
+                <input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+				
+				<input type="password" name="repeatpassword" placeholder="Repeat Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+				
+				<input type="date" name="dob" placeholder="Date of Birth" required>
+				
+				
+				<input type="text" name="SecurityQuestion" placeholder="Security Question" pattern ="[a-zA-Z0-9]*" required> 
+				<input type="text" name="SecurityAnswer" placeholder="Security Answer" pattern ="[a-zA-Z0-9]*" required>
+                <input type="submit" value="Sign Up"/>
+              </form> 
+			  
+          <!--forget-and-sign-up-btn-->
+              <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">
+                        Already Have Account?</a>
+              </div>
+        </div>
+		
+    </div> 
+	
+	
+	
+	</body>
