@@ -1,0 +1,10 @@
+<pages>
+    <link>
+        <title>Men T-Shirts</title>
+        <url>../../frontend/tshirt/MenT_shirts.php</url>
+    </link>
+    <link>
+        <title>Women T-Shirt</title>
+        <url>../../frontend/girlsTshirt/WomenTshirts.php</url>
+    </link>
+</pages>
